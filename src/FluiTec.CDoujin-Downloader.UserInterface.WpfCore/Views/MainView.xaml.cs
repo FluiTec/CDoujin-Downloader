@@ -17,7 +17,7 @@ namespace FluiTec.CDoujin_Downloader.UserInterface.WpfCore.Views
 
         private void Open_Executed(object sender, System.Windows.Input.ExecutedRoutedEventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
         private void Open_CanExecute(object sender, System.Windows.Input.CanExecuteRoutedEventArgs e)
@@ -27,7 +27,7 @@ namespace FluiTec.CDoujin_Downloader.UserInterface.WpfCore.Views
 
         private void Save_Executed(object sender, System.Windows.Input.ExecutedRoutedEventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
         private void Save_CanExecute(object sender, System.Windows.Input.CanExecuteRoutedEventArgs e)
