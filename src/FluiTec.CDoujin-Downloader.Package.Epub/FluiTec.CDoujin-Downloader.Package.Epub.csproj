@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>FluiTec.CDoujin_Downloader.Package.Epub</RootNamespace>
+  </PropertyGroup>
+
+</Project>

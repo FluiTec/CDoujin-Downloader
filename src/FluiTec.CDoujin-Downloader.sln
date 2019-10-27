@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.CDoujin-Downloader.Crawl", "FluiTec.CDoujin-Downloader.Crawl\FluiTec.CDoujin-Downloader.Crawl.csproj", "{8C9DC018-1226-44CE-9221-233A43215BF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.CDoujin-Downloader.Download", "FluiTec.CDoujin-Downloader.Download\FluiTec.CDoujin-Downloader.Download.csproj", "{1226072F-459B-4F73-82DD-8B93F12EE594}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.CDoujin-Downloader.Monitor", "FluiTec.CDoujin-Downloader.Monitor\FluiTec.CDoujin-Downloader.Monitor.csproj", "{3E470DC9-9F57-4E25-B184-7F6C53A513DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{28617D46-E8B3-4982-98A5-09FCC5F66BEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.CDoujin-Downloader.Package", "FluiTec.CDoujin-Downloader.Package\FluiTec.CDoujin-Downloader.Package.csproj", "{49550C01-BC64-4030-9795-2029A393F226}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package", "Package", "{20DDAC49-A07F-45FF-B00F-CC275ABA46C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.CDoujin-Downloader.Package.Epub", "FluiTec.CDoujin-Downloader.Package.Epub\FluiTec.CDoujin-Downloader.Package.Epub.csproj", "{B5128CB4-7930-45C2-BDEC-C318DD97511B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.CDoujin-Downloader.Package.Pdf", "FluiTec.CDoujin-Downloader.Package.Pdf\FluiTec.CDoujin-Downloader.Package.Pdf.csproj", "{66F68073-0016-4CAB-93C4-B25679EDA472}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.CDoujin-Downloader.Package.Zip", "FluiTec.CDoujin-Downloader.Package.Zip\FluiTec.CDoujin-Downloader.Package.Zip.csproj", "{32D9510C-44FE-468C-A8FA-B13D6D5900D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterface", "UserInterface", "{6FEAF7D1-F761-45F7-AE05-8887376E13F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluiTec.CDoujin-Downloader.UserInterface.WpfCore", "FluiTec.CDoujin-Downloader.UserInterface.WpfCore\FluiTec.CDoujin-Downloader.UserInterface.WpfCore.csproj", "{CF26CF13-E77B-4BE8-B78B-BE23E9871901}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C9DC018-1226-44CE-9221-233A43215BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C9DC018-1226-44CE-9221-233A43215BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C9DC018-1226-44CE-9221-233A43215BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C9DC018-1226-44CE-9221-233A43215BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1226072F-459B-4F73-82DD-8B93F12EE594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1226072F-459B-4F73-82DD-8B93F12EE594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1226072F-459B-4F73-82DD-8B93F12EE594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1226072F-459B-4F73-82DD-8B93F12EE594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E470DC9-9F57-4E25-B184-7F6C53A513DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E470DC9-9F57-4E25-B184-7F6C53A513DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E470DC9-9F57-4E25-B184-7F6C53A513DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E470DC9-9F57-4E25-B184-7F6C53A513DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49550C01-BC64-4030-9795-2029A393F226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49550C01-BC64-4030-9795-2029A393F226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49550C01-BC64-4030-9795-2029A393F226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49550C01-BC64-4030-9795-2029A393F226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5128CB4-7930-45C2-BDEC-C318DD97511B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5128CB4-7930-45C2-BDEC-C318DD97511B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5128CB4-7930-45C2-BDEC-C318DD97511B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5128CB4-7930-45C2-BDEC-C318DD97511B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F68073-0016-4CAB-93C4-B25679EDA472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F68073-0016-4CAB-93C4-B25679EDA472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F68073-0016-4CAB-93C4-B25679EDA472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F68073-0016-4CAB-93C4-B25679EDA472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32D9510C-44FE-468C-A8FA-B13D6D5900D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D9510C-44FE-468C-A8FA-B13D6D5900D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D9510C-44FE-468C-A8FA-B13D6D5900D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D9510C-44FE-468C-A8FA-B13D6D5900D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF26CF13-E77B-4BE8-B78B-BE23E9871901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF26CF13-E77B-4BE8-B78B-BE23E9871901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF26CF13-E77B-4BE8-B78B-BE23E9871901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF26CF13-E77B-4BE8-B78B-BE23E9871901}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8C9DC018-1226-44CE-9221-233A43215BF9} = {28617D46-E8B3-4982-98A5-09FCC5F66BEC}
+		{1226072F-459B-4F73-82DD-8B93F12EE594} = {28617D46-E8B3-4982-98A5-09FCC5F66BEC}
+		{3E470DC9-9F57-4E25-B184-7F6C53A513DE} = {28617D46-E8B3-4982-98A5-09FCC5F66BEC}
+		{49550C01-BC64-4030-9795-2029A393F226} = {28617D46-E8B3-4982-98A5-09FCC5F66BEC}
+		{20DDAC49-A07F-45FF-B00F-CC275ABA46C4} = {28617D46-E8B3-4982-98A5-09FCC5F66BEC}
+		{B5128CB4-7930-45C2-BDEC-C318DD97511B} = {20DDAC49-A07F-45FF-B00F-CC275ABA46C4}
+		{66F68073-0016-4CAB-93C4-B25679EDA472} = {20DDAC49-A07F-45FF-B00F-CC275ABA46C4}
+		{32D9510C-44FE-468C-A8FA-B13D6D5900D2} = {20DDAC49-A07F-45FF-B00F-CC275ABA46C4}
+		{CF26CF13-E77B-4BE8-B78B-BE23E9871901} = {6FEAF7D1-F761-45F7-AE05-8887376E13F7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2884E790-CA32-484C-BCD9-7B4C75F41688}
+	EndGlobalSection
+EndGlobal
