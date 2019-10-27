@@ -5,6 +5,27 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <RootNamespace>FluiTec.CDoujin_Downloader.UserInterface.WpfCore</RootNamespace>
     <UseWPF>true</UseWPF>
+    <StartupObject>FluiTec.CDoujin_Downloader.UserInterface.WpfCore.App</StartupObject>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/FluiTec/CDoujin-Downloader</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/FluiTec/CDoujin-Downloader</RepositoryUrl>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <ApplicationIcon>manga-icon-14.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="manga-icon-14.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="manga-icon-14.ico" />
+  </ItemGroup>
 
 </Project>
