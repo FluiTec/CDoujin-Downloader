@@ -123,11 +123,47 @@
   <data name="MainMenu_File" xml:space="preserve">
     <value>_File</value>
   </data>
-  <data name="MainMenu_File_SelectLanguage" xml:space="preserve">
-    <value>Select Language</value>
+  <data name="MainMenu_File_Exit" xml:space="preserve">
+    <value>_Exit</value>
+  </data>
+  <data name="MainMenu_File_Exit_Gesture" xml:space="preserve">
+    <value>Ctrl+Q</value>
+  </data>
+  <data name="MainMenu_File_ExportBackup" xml:space="preserve">
+    <value>_Export Backup</value>
+  </data>
+  <data name="MainMenu_File_ImportBackup" xml:space="preserve">
+    <value>_Import Backup</value>
+  </data>
+  <data name="MainMenu_File_Minimize" xml:space="preserve">
+    <value>_Minimize to tray</value>
+  </data>
+  <data name="MainMenu_File_Minimize_Gesture" xml:space="preserve">
+    <value>Ctrl+Alt+H</value>
+  </data>
+  <data name="MainMenu_File_Open" xml:space="preserve">
+    <value>_Open ...</value>
+  </data>
+  <data name="MainMenu_File_Open_Gesture" xml:space="preserve">
+    <value>Ctrl+O</value>
+  </data>
+  <data name="MainMenu_File_Options" xml:space="preserve">
+    <value>O_ptions</value>
+  </data>
+  <data name="MainMenu_File_Save" xml:space="preserve">
+    <value>_Save ...</value>
+  </data>
+  <data name="MainMenu_File_Save_Gesture" xml:space="preserve">
+    <value>Ctrl+S</value>
+  </data>
+  <data name="MainMenu_File_SiteOptions" xml:space="preserve">
+    <value>Site Op_tions</value>
   </data>
   <data name="MainMenu_Help" xml:space="preserve">
     <value>_Help</value>
+  </data>
+  <data name="MainMenu_Help_SelectLanguage" xml:space="preserve">
+    <value>Select Language</value>
   </data>
   <data name="MainMenu_Manga" xml:space="preserve">
     <value>_Manga</value>

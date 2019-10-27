@@ -79,11 +79,110 @@ namespace FluiTec.CDoujin_Downloader.UserInterface.WpfCore.Cultures {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Select Language ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die _Exit ähnelt.
         /// </summary>
-        public static string MainMenu_File_SelectLanguage {
+        public static string MainMenu_File_Exit {
             get {
-                return ResourceManager.GetString("MainMenu_File_SelectLanguage", resourceCulture);
+                return ResourceManager.GetString("MainMenu_File_Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+Q ähnelt.
+        /// </summary>
+        public static string MainMenu_File_Exit_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_File_Exit_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die _Export Backup ähnelt.
+        /// </summary>
+        public static string MainMenu_File_ExportBackup {
+            get {
+                return ResourceManager.GetString("MainMenu_File_ExportBackup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die _Import Backup ähnelt.
+        /// </summary>
+        public static string MainMenu_File_ImportBackup {
+            get {
+                return ResourceManager.GetString("MainMenu_File_ImportBackup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die _Minimize to tray ähnelt.
+        /// </summary>
+        public static string MainMenu_File_Minimize {
+            get {
+                return ResourceManager.GetString("MainMenu_File_Minimize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+Alt+H ähnelt.
+        /// </summary>
+        public static string MainMenu_File_Minimize_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_File_Minimize_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die _Open ... ähnelt.
+        /// </summary>
+        public static string MainMenu_File_Open {
+            get {
+                return ResourceManager.GetString("MainMenu_File_Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+O ähnelt.
+        /// </summary>
+        public static string MainMenu_File_Open_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_File_Open_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die O_ptions ähnelt.
+        /// </summary>
+        public static string MainMenu_File_Options {
+            get {
+                return ResourceManager.GetString("MainMenu_File_Options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die _Save ... ähnelt.
+        /// </summary>
+        public static string MainMenu_File_Save {
+            get {
+                return ResourceManager.GetString("MainMenu_File_Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+S ähnelt.
+        /// </summary>
+        public static string MainMenu_File_Save_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_File_Save_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Site Op_tions ähnelt.
+        /// </summary>
+        public static string MainMenu_File_SiteOptions {
+            get {
+                return ResourceManager.GetString("MainMenu_File_SiteOptions", resourceCulture);
             }
         }
         
@@ -93,6 +192,15 @@ namespace FluiTec.CDoujin_Downloader.UserInterface.WpfCore.Cultures {
         public static string MainMenu_Help {
             get {
                 return ResourceManager.GetString("MainMenu_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Select Language ähnelt.
+        /// </summary>
+        public static string MainMenu_Help_SelectLanguage {
+            get {
+                return ResourceManager.GetString("MainMenu_Help_SelectLanguage", resourceCulture);
             }
         }
         

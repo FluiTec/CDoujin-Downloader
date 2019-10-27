@@ -5,29 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FluiTec.CDoujin_Downloader.UserInterface.WpfCore"
         xmlns:converters="clr-namespace:FluiTec.CDoujin_Downloader.UserInterface.WpfCore.Converters"
+        xmlns:commands="clr-namespace:FluiTec.CDoujin_Downloader.UserInterface.WpfCore.Commands"
         mc:Ignorable="d"
         Title="{Binding ApplicationName}" 
-        Height="450" Width="800" 
+        Height="800" Width="800" 
         Icon="../manga-icon-14.ico">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
         <converters:CultureToBooleanConverter x:Key="CultureToBooleanConverter" />
     </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding x:Name="Open" Command="Open" Executed="Open_Executed" CanExecute="Open_CanExecute" />
+        <CommandBinding x:Name="Save" Command="Save" Executed="Save_Executed" CanExecute="Save_CanExecute" />
+        <CommandBinding x:Name="Minimize" Command="{x:Static commands:ApplicationCommands.Minimize}"  Executed="Minimize_Executed" CanExecute="Minimize_CanExecute" />
+        <CommandBinding x:Name="Quit" Command="{x:Static commands:ApplicationCommands.Quit}"  Executed="Quit_Executed" CanExecute="Quit_CanExecute" />
+    </Window.CommandBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20px" />
+            <RowDefinition Height="32px" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
-        <Menu IsMainMenu="True" Grid.ColumnSpan="2">
+        <Menu IsMainMenu="True" Grid.Row="0">
             <MenuItem Header="{Binding Path=MainMenu_File, Source={StaticResource Resources}}">
-                
+                <MenuItem Header="{Binding Path=MainMenu_File_Open, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_File_Open_Gesture, Source={StaticResource Resources}}" Command="Open"></MenuItem>
+                <MenuItem Header="{Binding Path=MainMenu_File_Save, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_File_Save_Gesture, Source={StaticResource Resources}}" Command="Save"></MenuItem>
+                <Separator />
+                <MenuItem Header="{Binding Path=MainMenu_File_ImportBackup, Source={StaticResource Resources}}"></MenuItem>
+                <MenuItem Header="{Binding Path=MainMenu_File_ExportBackup, Source={StaticResource Resources}}"></MenuItem>
+                <Separator />
+                <MenuItem Header="{Binding Path=MainMenu_File_Options, Source={StaticResource Resources}}"></MenuItem>
+                <MenuItem Header="{Binding Path=MainMenu_File_SiteOptions, Source={StaticResource Resources}}"></MenuItem>
+                <Separator />
+                <MenuItem Header="{Binding Path=MainMenu_File_Minimize, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_File_Minimize_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.Minimize}"></MenuItem>
+                <MenuItem Header="{Binding Path=MainMenu_File_Exit, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_File_Exit_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.Quit}"></MenuItem>
             </MenuItem>
             <MenuItem Header="{Binding Path=MainMenu_Manga, Source={StaticResource Resources}}" />
             <MenuItem Header="{Binding Path=MainMenu_Downloads, Source={StaticResource Resources}}" />
             <MenuItem Header="{Binding Path=MainMenu_Tools, Source={StaticResource Resources}}" />
             <MenuItem Header="{Binding Path=MainMenu_Help, Source={StaticResource Resources}}">
-                <MenuItem Header="{Binding Path=MainMenu_File_SelectLanguage, Source={StaticResource Resources}}" ItemsSource="{Binding Path=Languages, Mode=OneWay}">
+                <MenuItem Header="{Binding Path=MainMenu_Help_SelectLanguage, Source={StaticResource Resources}}" ItemsSource="{Binding Path=Languages, Mode=OneWay}">
                     <MenuItem.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Path=NativeName}" />
@@ -45,5 +63,64 @@
             </MenuItem>
             <!-- Create visible attribution for Icon, see: https://icon-library.net-->
         </Menu>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Height="32px">
+            <StackPanel.Background>
+                <SolidColorBrush Color="#F0F0F0" />
+            </StackPanel.Background>
+            <Button BorderThickness="0" Width="32px" Height="32px">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0F0F0" />
+                </Button.Background>
+                <Image Source="../Resources/Icon_Play.png" />
+            </Button>
+            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0F0F0" />
+                </Button.Background>
+                <Image Source="../Resources/Icon_Pause.png" />
+            </Button>
+            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0F0F0" />
+                </Button.Background>
+                <Image Source="../Resources/Icon_Stop.png" />
+            </Button>
+            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0F0F0" />
+                </Button.Background>
+                <Image Source="../Resources/Icon_Clipboard_Single.png" />
+            </Button>
+            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0F0F0" />
+                </Button.Background>
+                <Image Source="../Resources/Icon_Clipboard_Monitor.png" />
+            </Button>
+            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0F0F0" />
+                </Button.Background>
+                <Image Source="../Resources/Icon_Up.png" />
+            </Button>
+            <Button BorderThickness="0" Margin="10,0,0,0" Width="32px" Height="32px">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0F0F0" />
+                </Button.Background>
+                <Image Source="../Resources/Icon_Down.png" />
+            </Button>
+            <Button BorderThickness="0" Margin="10,0,0,0" Width="32px" Height="32px">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0F0F0" />
+                </Button.Background>
+                <Image Source="../Resources/Icon_Top.png" />
+            </Button>
+            <Button BorderThickness="0" Margin="10,0,0,0" Width="32px" Height="32px">
+                <Button.Background>
+                    <SolidColorBrush Color="#F0F0F0" />
+                </Button.Background>
+                <Image Source="../Resources/Icon_Bottom.png" />
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

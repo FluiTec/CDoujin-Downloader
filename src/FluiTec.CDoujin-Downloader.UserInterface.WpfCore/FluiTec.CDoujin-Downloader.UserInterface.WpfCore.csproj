@@ -15,6 +15,16 @@
 
   <ItemGroup>
     <None Remove="manga-icon-14.ico" />
+    <None Remove="Resources\Icon_Bottom.png" />
+    <None Remove="Resources\Icon_Clipboard_Monitor.png" />
+    <None Remove="Resources\Icon_Clipboard_Single.png" />
+    <None Remove="Resources\Icon_Down.png" />
+    <None Remove="Resources\Icon_Manga.jpg" />
+    <None Remove="Resources\Icon_Pause.png" />
+    <None Remove="Resources\Icon_Play.png" />
+    <None Remove="Resources\Icon_Stop.png" />
+    <None Remove="Resources\Icon_Top.png" />
+    <None Remove="Resources\Icon_Up.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,6 +43,16 @@
 
   <ItemGroup>
     <Resource Include="manga-icon-14.ico" />
+    <Resource Include="Resources\Icon_Play.png" />
+    <Resource Include="Resources\Icon_Down.png" />
+    <Resource Include="Resources\Icon_Bottom.png" />
+    <Resource Include="Resources\Icon_Clipboard_Monitor.png" />
+    <Resource Include="Resources\Icon_Clipboard_Single.png" />
+    <Resource Include="Resources\Icon_Manga.jpg" />
+    <Resource Include="Resources\Icon_Pause.png" />
+    <Resource Include="Resources\Icon_Stop.png" />
+    <Resource Include="Resources\Icon_Top.png" />
+    <Resource Include="Resources\Icon_Up.png" />
   </ItemGroup>
 
   <ItemGroup>
