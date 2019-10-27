@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MainMenu_Downloads" xml:space="preserve">
-    <value>_Downloads</value>
+    <value>D_ownloads</value>
   </data>
   <data name="MainMenu_File" xml:space="preserve">
     <value>_Datei</value>
