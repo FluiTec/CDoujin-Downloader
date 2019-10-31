@@ -61,11 +61,227 @@ namespace FluiTec.CDoujin_Downloader.UserInterface.WpfCore.Cultures {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Enable/Disable clipboard monitor ähnelt.
+        /// </summary>
+        public static string ActionBar_AddClipboard_Monitor {
+            get {
+                return ResourceManager.GetString("ActionBar_AddClipboard_Monitor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Add manga from clipboard ähnelt.
+        /// </summary>
+        public static string ActionBar_AddClipboard_Single {
+            get {
+                return ResourceManager.GetString("ActionBar_AddClipboard_Single", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Move selected items to bottom ähnelt.
+        /// </summary>
+        public static string ActionBar_Move_Bottom {
+            get {
+                return ResourceManager.GetString("ActionBar_Move_Bottom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Move selected items down ähnelt.
+        /// </summary>
+        public static string ActionBar_Move_Down {
+            get {
+                return ResourceManager.GetString("ActionBar_Move_Down", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Move selected items to top ähnelt.
+        /// </summary>
+        public static string ActionBar_Move_Top {
+            get {
+                return ResourceManager.GetString("ActionBar_Move_Top", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Move selected items up ähnelt.
+        /// </summary>
+        public static string ActionBar_Move_Up {
+            get {
+                return ResourceManager.GetString("ActionBar_Move_Up", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pause downloads ähnelt.
+        /// </summary>
+        public static string ActionBar_PauseDownloads_Tooltip {
+            get {
+                return ResourceManager.GetString("ActionBar_PauseDownloads_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Start downloads ähnelt.
+        /// </summary>
+        public static string ActionBar_StartDownloads_Tooltip {
+            get {
+                return ResourceManager.GetString("ActionBar_StartDownloads_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Stop downloads ähnelt.
+        /// </summary>
+        public static string ActionBar_StopDownloads_Tooltip {
+            get {
+                return ResourceManager.GetString("ActionBar_StopDownloads_Tooltip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bookmarks ähnelt.
+        /// </summary>
+        public static string LeftTab_Bookmarks_Header {
+            get {
+                return ResourceManager.GetString("LeftTab_Bookmarks_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Filter ähnelt.
+        /// </summary>
+        public static string LeftTab_Filter_Header {
+            get {
+                return ResourceManager.GetString("LeftTab_Filter_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die History ähnelt.
+        /// </summary>
+        public static string LeftTab_History_Header {
+            get {
+                return ResourceManager.GetString("LeftTab_History_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die _Downloads ähnelt.
         /// </summary>
         public static string MainMenu_Downloads {
             get {
                 return ResourceManager.GetString("MainMenu_Downloads", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Filter ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_Filter {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_Filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+F ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_Filter_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_Filter_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die History ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_History {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+H ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_History_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_History_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pause all ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_PauseAll {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_PauseAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+P ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_PauseAll_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_PauseAll_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Queue all ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_QueueAll {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_QueueAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+Q ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_QueueAll_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_QueueAll_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Start all ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_StartAll {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_StartAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+Shift+A ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_StartAll_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_StartAll_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Stop all ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_StopAll {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_StopAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+Alt+A ähnelt.
+        /// </summary>
+        public static string MainMenu_Downloads_StopAll_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Downloads_StopAll_Gesture", resourceCulture);
             }
         }
         
@@ -196,11 +412,65 @@ namespace FluiTec.CDoujin_Downloader.UserInterface.WpfCore.Cultures {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die About ähnelt.
+        /// </summary>
+        public static string MainMenu_Help_About {
+            get {
+                return ResourceManager.GetString("MainMenu_Help_About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Enable/Disable diagnostics ähnelt.
+        /// </summary>
+        public static string MainMenu_Help_Diagnostics {
+            get {
+                return ResourceManager.GetString("MainMenu_Help_Diagnostics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die View help ähnelt.
+        /// </summary>
+        public static string MainMenu_Help_Help {
+            get {
+                return ResourceManager.GetString("MainMenu_Help_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die F1 ähnelt.
+        /// </summary>
+        public static string MainMenu_Help_Help_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Help_Help_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Select Language ähnelt.
         /// </summary>
         public static string MainMenu_Help_SelectLanguage {
             get {
                 return ResourceManager.GetString("MainMenu_Help_SelectLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Enable/Disable stats ähnelt.
+        /// </summary>
+        public static string MainMenu_Help_Stats {
+            get {
+                return ResourceManager.GetString("MainMenu_Help_Stats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Check for updates ähnelt.
+        /// </summary>
+        public static string MainMenu_Help_Updates {
+            get {
+                return ResourceManager.GetString("MainMenu_Help_Updates", resourceCulture);
             }
         }
         
@@ -214,11 +484,164 @@ namespace FluiTec.CDoujin_Downloader.UserInterface.WpfCore.Cultures {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Add from list ähnelt.
+        /// </summary>
+        public static string MainMenu_Manga_AddFromList {
+            get {
+                return ResourceManager.GetString("MainMenu_Manga_AddFromList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+L ähnelt.
+        /// </summary>
+        public static string MainMenu_Manga_AddFromList_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Manga_AddFromList_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bookmarks ähnelt.
+        /// </summary>
+        public static string MainMenu_Manga_Bookmarks {
+            get {
+                return ResourceManager.GetString("MainMenu_Manga_Bookmarks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+D ähnelt.
+        /// </summary>
+        public static string MainMenu_Manga_Bookmarks_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Manga_Bookmarks_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Enable/Disable clipboard monitor ähnelt.
+        /// </summary>
+        public static string MainMenu_Manga_ClipboardMonitor {
+            get {
+                return ResourceManager.GetString("MainMenu_Manga_ClipboardMonitor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+Alt+V ähnelt.
+        /// </summary>
+        public static string MainMenu_Manga_ClipboardMonitor_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Manga_ClipboardMonitor_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Add from clipboard ähnelt.
+        /// </summary>
+        public static string MainMenu_Manga_PasteClipboard {
+            get {
+                return ResourceManager.GetString("MainMenu_Manga_PasteClipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ctrl+Shift+V ähnelt.
+        /// </summary>
+        public static string MainMenu_Manga_PasteClipboard_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Manga_PasteClipboard_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Search for manga ähnelt.
+        /// </summary>
+        public static string MainMenu_Manga_SearchManga {
+            get {
+                return ResourceManager.GetString("MainMenu_Manga_SearchManga", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die F3 ähnelt.
+        /// </summary>
+        public static string MainMenu_Manga_SearchManga_Gesture {
+            get {
+                return ResourceManager.GetString("MainMenu_Manga_SearchManga_Gesture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die _Tools ähnelt.
         /// </summary>
         public static string MainMenu_Tools {
             get {
                 return ResourceManager.GetString("MainMenu_Tools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Domain management ähnelt.
+        /// </summary>
+        public static string MainMenu_Tools_DomainManagement {
+            get {
+                return ResourceManager.GetString("MainMenu_Tools_DomainManagement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die About ähnelt.
+        /// </summary>
+        public static string MainTab_About_Header {
+            get {
+                return ResourceManager.GetString("MainTab_About_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Downloads ähnelt.
+        /// </summary>
+        public static string MainTab_Downloads_Header {
+            get {
+                return ResourceManager.GetString("MainTab_Downloads_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Settings ähnelt.
+        /// </summary>
+        public static string MainTab_Settings_Header {
+            get {
+                return ResourceManager.GetString("MainTab_Settings_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Add ähnelt.
+        /// </summary>
+        public static string MangaPanel_Button {
+            get {
+                return ResourceManager.GetString("MangaPanel_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Add manga from URL: ähnelt.
+        /// </summary>
+        public static string MangaPanel_Label {
+            get {
+                return ResourceManager.GetString("MangaPanel_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Url ... ähnelt.
+        /// </summary>
+        public static string MangaPanel_Watermark {
+            get {
+                return ResourceManager.GetString("MangaPanel_Watermark", resourceCulture);
             }
         }
     }

@@ -3,31 +3,73 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FluiTec.CDoujin_Downloader.UserInterface.WpfCore"
         xmlns:converters="clr-namespace:FluiTec.CDoujin_Downloader.UserInterface.WpfCore.Converters"
         xmlns:commands="clr-namespace:FluiTec.CDoujin_Downloader.UserInterface.WpfCore.Commands"
         mc:Ignorable="d"
-        Title="{Binding ApplicationName}" 
+        Title="{Binding ApplicationName}"
+        MinHeight="400" MinWidth="400"
         Height="800" Width="800" 
         Icon="../manga-icon-14.ico">
     <Window.Resources>
+        <!-- Converters-->
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
         <converters:CultureToBooleanConverter x:Key="CultureToBooleanConverter" />
+        <!-- Styles-->
+        <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="White" BorderBrush="#FF7D8683" BorderThickness="1"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="5,0,0,0" VerticalAlignment="Center" />
+                            <Label Margin="5,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                               Visibility="Collapsed" Foreground="Gray" FontFamily="Arial"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text" Value=""/>
+                                </MultiTrigger.Conditions>
+                                <Setter Property="Visibility" TargetName="WaterMarkLabel" Value="Visible"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="DimGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Window.CommandBindings>
         <CommandBinding x:Name="Open" Command="Open" Executed="Open_Executed" CanExecute="Open_CanExecute" />
         <CommandBinding x:Name="Save" Command="Save" Executed="Save_Executed" CanExecute="Save_CanExecute" />
         <CommandBinding x:Name="Minimize" Command="{x:Static commands:ApplicationCommands.Minimize}"  Executed="Minimize_Executed" CanExecute="Minimize_CanExecute" />
         <CommandBinding x:Name="Quit" Command="{x:Static commands:ApplicationCommands.Quit}"  Executed="Quit_Executed" CanExecute="Quit_CanExecute" />
+        <CommandBinding x:Name="PasteClipboard" Command="{x:Static commands:ApplicationCommands.PasteClipboard}"  Executed="PasteClipboard_Executed" CanExecute="PasteClipboard_CanExecute" />
+        <CommandBinding x:Name="ClipboardMonitor" Command="{x:Static commands:ApplicationCommands.ClipboardMonitor}"  Executed="ClipboardMonitor_Executed" CanExecute="ClipboardMonitor_CanExecute" />
+        <CommandBinding x:Name="AddFromList" Command="{x:Static commands:ApplicationCommands.AddFromList}"  Executed="AddFromList_Executed" CanExecute="AddFromList_CanExecute" />
+        <CommandBinding x:Name="ShowBookmarks" Command="{x:Static commands:ApplicationCommands.ShowBookmarks}"  Executed="ShowBookmarks_Executed" CanExecute="ShowBookmarks_CanExecute" />
+        <CommandBinding x:Name="SearchManga" Command="{x:Static commands:ApplicationCommands.SearchManga}"  Executed="SearchManga_Executed" CanExecute="SearchManga_CanExecute" />
+        <CommandBinding x:Name="StartDownloads" Command="{x:Static commands:ApplicationCommands.StartDownloads}"  Executed="StartDownloads_Executed" CanExecute="StartDownloads_CanExecute" />
+        <CommandBinding x:Name="QueueDownloads" Command="{x:Static commands:ApplicationCommands.QueueDownloads}"  Executed="QueueDownloads_Executed" CanExecute="QueueDownloads_CanExecute" />
+        <CommandBinding x:Name="PauseDownloads" Command="{x:Static commands:ApplicationCommands.PauseDownloads}"  Executed="PauseDownloads_Executed" CanExecute="PauseDownloads_CanExecute" />
+        <CommandBinding x:Name="StopDownloads" Command="{x:Static commands:ApplicationCommands.StopDownloads}"  Executed="StopDownloads_Executed" CanExecute="StopDownloads_CanExecute" />
+        <CommandBinding x:Name="FilterDownloads" Command="{x:Static commands:ApplicationCommands.FilterDownloads}"  Executed="FilterDownloads_Executed" CanExecute="FilterDownloads_CanExecute" />
+        <CommandBinding x:Name="HistoryDownloads" Command="{x:Static commands:ApplicationCommands.HistoryDownloads}"  Executed="HistoryDownloads_Executed" CanExecute="HistoryDownloads_CanExecute" />
+        <CommandBinding x:Name="Help" Command="Help" Executed="Help_Executed" CanExecute="Help_CanExecute" />
     </Window.CommandBindings>
-    <Grid>
+    <Grid Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="20px" />
             <RowDefinition Height="32px" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
         <Menu IsMainMenu="True" Grid.Row="0">
+            <!-- File -->
             <MenuItem Header="{Binding Path=MainMenu_File, Source={StaticResource Resources}}">
                 <MenuItem Header="{Binding Path=MainMenu_File_Open, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_File_Open_Gesture, Source={StaticResource Resources}}" Command="Open"></MenuItem>
                 <MenuItem Header="{Binding Path=MainMenu_File_Save, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_File_Save_Gesture, Source={StaticResource Resources}}" Command="Save"></MenuItem>
@@ -41,10 +83,35 @@
                 <MenuItem Header="{Binding Path=MainMenu_File_Minimize, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_File_Minimize_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.Minimize}"></MenuItem>
                 <MenuItem Header="{Binding Path=MainMenu_File_Exit, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_File_Exit_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.Quit}"></MenuItem>
             </MenuItem>
-            <MenuItem Header="{Binding Path=MainMenu_Manga, Source={StaticResource Resources}}" />
-            <MenuItem Header="{Binding Path=MainMenu_Downloads, Source={StaticResource Resources}}" />
-            <MenuItem Header="{Binding Path=MainMenu_Tools, Source={StaticResource Resources}}" />
+            <!-- Manga -->
+            <MenuItem Header="{Binding Path=MainMenu_Manga, Source={StaticResource Resources}}">
+                <MenuItem Header="{Binding Path=MainMenu_Manga_PasteClipboard, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Manga_PasteClipboard_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.PasteClipboard}"></MenuItem>
+                <Separator />
+                <MenuItem Header="{Binding Path=MainMenu_Manga_AddFromList, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Manga_AddFromList_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.AddFromList}" />
+                <MenuItem Header="{Binding Path=MainMenu_Manga_ClipboardMonitor, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Manga_ClipboardMonitor_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.ClipboardMonitor}" />
+                <Separator />
+                <MenuItem Header="{Binding Path=MainMenu_Manga_Bookmarks, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Manga_Bookmarks_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.ShowBookmarks}" />
+                <MenuItem Header="{Binding Path=MainMenu_Manga_SearchManga, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Manga_SearchManga_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.SearchManga}" />
+            </MenuItem>
+            <!-- Downloads -->
+            <MenuItem Header="{Binding Path=MainMenu_Downloads, Source={StaticResource Resources}}">
+                <MenuItem Header="{Binding Path=MainMenu_Downloads_StartAll, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Downloads_StartAll_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.StartDownloads}" />
+                <MenuItem Header="{Binding Path=MainMenu_Downloads_QueueAll, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Downloads_QueueAll_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.QueueDownloads}" />
+                <MenuItem Header="{Binding Path=MainMenu_Downloads_PauseAll, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Downloads_PauseAll_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.PauseDownloads}" />
+                <MenuItem Header="{Binding Path=MainMenu_Downloads_StopAll, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Downloads_StopAll_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.StopDownloads}" />
+                <Separator />
+                <MenuItem Header="{Binding Path=MainMenu_Downloads_Filter, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Downloads_Filter_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.FilterDownloads}" />
+                <MenuItem Header="{Binding Path=MainMenu_Downloads_History, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Downloads_History_Gesture, Source={StaticResource Resources}}" Command="{x:Static commands:ApplicationCommands.HistoryDownloads}" />
+            </MenuItem>
+            <!-- Tools -->
+            <MenuItem Header="{Binding Path=MainMenu_Tools, Source={StaticResource Resources}}">
+                <MenuItem Header="{Binding Path=MainMenu_Tools_DomainManagement, Source={StaticResource Resources}}" />
+            </MenuItem>
+            <!-- Help -->
             <MenuItem Header="{Binding Path=MainMenu_Help, Source={StaticResource Resources}}">
+                <MenuItem Header="{Binding Path=MainMenu_Help_Help, Source={StaticResource Resources}}" InputGestureText="{Binding Path=MainMenu_Help_Help_Gesture, Source={StaticResource Resources}}" Command="Help"></MenuItem>
+                <Separator />
+                <!-- Language Picker -->
                 <MenuItem Header="{Binding Path=MainMenu_Help_SelectLanguage, Source={StaticResource Resources}}" ItemsSource="{Binding Path=Languages, Mode=OneWay}">
                     <MenuItem.ItemTemplate>
                         <DataTemplate>
@@ -60,67 +127,108 @@
                         </Style>
                     </MenuItem.ItemContainerStyle>
                 </MenuItem>
+                <MenuItem Header="{Binding Path=MainMenu_Help_Diagnostics, Source={StaticResource Resources}}" />
+                <MenuItem Header="{Binding Path=MainMenu_Help_Stats, Source={StaticResource Resources}}" />
+                <Separator />
+                <MenuItem Header="{Binding Path=MainMenu_Help_Updates, Source={StaticResource Resources}}" />
+                <Separator />
+                <MenuItem Header="{Binding Path=MainMenu_Help_About, Source={StaticResource Resources}}" /> 
             </MenuItem>
             <!-- Create visible attribution for Icon, see: https://icon-library.net-->
         </Menu>
+        <!-- ActionBar -->
         <StackPanel Grid.Row="1" Orientation="Horizontal" Height="32px">
             <StackPanel.Background>
                 <SolidColorBrush Color="#F0F0F0" />
             </StackPanel.Background>
-            <Button BorderThickness="0" Width="32px" Height="32px">
+            <Button BorderThickness="0" Width="32px" Height="32px" ToolTip="{Binding Path=ActionBar_StartDownloads_Tooltip, Source={StaticResource Resources}}">
                 <Button.Background>
                     <SolidColorBrush Color="#F0F0F0" />
                 </Button.Background>
                 <Image Source="../Resources/Icon_Play.png" />
             </Button>
-            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px">
+            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px" ToolTip="{Binding Path=ActionBar_PauseDownloads_Tooltip, Source={StaticResource Resources}}">
                 <Button.Background>
                     <SolidColorBrush Color="#F0F0F0" />
                 </Button.Background>
                 <Image Source="../Resources/Icon_Pause.png" />
             </Button>
-            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px">
+            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px" ToolTip="{Binding Path=ActionBar_StopDownloads_Tooltip, Source={StaticResource Resources}}">
                 <Button.Background>
                     <SolidColorBrush Color="#F0F0F0" />
                 </Button.Background>
                 <Image Source="../Resources/Icon_Stop.png" />
             </Button>
-            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px">
+            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px" ToolTip="{Binding Path=ActionBar_AddClipboard_Single, Source={StaticResource Resources}}">
                 <Button.Background>
                     <SolidColorBrush Color="#F0F0F0" />
                 </Button.Background>
                 <Image Source="../Resources/Icon_Clipboard_Single.png" />
             </Button>
-            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px">
+            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px" ToolTip="{Binding Path=ActionBar_AddClipboard_Monitor, Source={StaticResource Resources}}">
                 <Button.Background>
                     <SolidColorBrush Color="#F0F0F0" />
                 </Button.Background>
                 <Image Source="../Resources/Icon_Clipboard_Monitor.png" />
             </Button>
-            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px">
+            <Button BorderThickness="0" Margin="10,0,0,0"  Width="32px" Height="32px" ToolTip="{Binding Path=ActionBar_Move_Up, Source={StaticResource Resources}}">
                 <Button.Background>
                     <SolidColorBrush Color="#F0F0F0" />
                 </Button.Background>
                 <Image Source="../Resources/Icon_Up.png" />
             </Button>
-            <Button BorderThickness="0" Margin="10,0,0,0" Width="32px" Height="32px">
+            <Button BorderThickness="0" Margin="10,0,0,0" Width="32px" Height="32px" ToolTip="{Binding Path=ActionBar_Move_Down, Source={StaticResource Resources}}">
                 <Button.Background>
                     <SolidColorBrush Color="#F0F0F0" />
                 </Button.Background>
                 <Image Source="../Resources/Icon_Down.png" />
             </Button>
-            <Button BorderThickness="0" Margin="10,0,0,0" Width="32px" Height="32px">
+            <Button BorderThickness="0" Margin="10,0,0,0" Width="32px" Height="32px" ToolTip="{Binding Path=ActionBar_Move_Top, Source={StaticResource Resources}}">
                 <Button.Background>
                     <SolidColorBrush Color="#F0F0F0" />
                 </Button.Background>
                 <Image Source="../Resources/Icon_Top.png" />
             </Button>
-            <Button BorderThickness="0" Margin="10,0,0,0" Width="32px" Height="32px">
+            <Button BorderThickness="0" Margin="10,0,0,0" Width="32px" Height="32px" ToolTip="{Binding Path=ActionBar_Move_Bottom, Source={StaticResource Resources}}">
                 <Button.Background>
                     <SolidColorBrush Color="#F0F0F0" />
                 </Button.Background>
                 <Image Source="../Resources/Icon_Bottom.png" />
             </Button>
         </StackPanel>
+        <!-- MangaPanel-->
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <StackPanel.Background>
+                <SolidColorBrush Color="#F0F0F0" />
+            </StackPanel.Background>            
+            <Grid Width="{Binding ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Margin="5,0,0,0" Content="{Binding Path=MangaPanel_Label, Source={StaticResource Resources}}" />
+                <TextBox Style="{StaticResource MyWaterMarkStyle}" Tag="{Binding Path=MangaPanel_Watermark, Source={StaticResource Resources}}" Grid.Column="1" Margin="10,0,10,0" VerticalAlignment="Center" />
+                <Button Grid.Column="2" Margin="0,5,20,6" Content="{Binding Path=MangaPanel_Button, Source={StaticResource Resources}}" />
+            </Grid>
+        </StackPanel>
+        <Grid Grid.Row="4" Width="{Binding ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TabControl Grid.Column="0">
+                <TabItem Header="{Binding Path=LeftTab_Bookmarks_Header, Source={StaticResource Resources}}" />
+                <TabItem Header="{Binding Path=LeftTab_History_Header, Source={StaticResource Resources}}" />
+                <TabItem Header="{Binding Path=LeftTab_Filter_Header, Source={StaticResource Resources}}" />
+            </TabControl>
+            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
+            <TabControl Grid.Column="2" Width="{Binding ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}">
+                <TabItem Header="{Binding Path=MainTab_Downloads_Header, Source={StaticResource Resources}}" />
+                <TabItem Header="{Binding Path=MainTab_Settings_Header, Source={StaticResource Resources}}" />
+                <TabItem Header="{Binding Path=MainTab_About_Header, Source={StaticResource Resources}}" />
+            </TabControl>
+        </Grid>
     </Grid>
 </Window>

@@ -117,8 +117,80 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ActionBar_AddClipboard_Monitor" xml:space="preserve">
+    <value>Enable/Disable clipboard monitor</value>
+  </data>
+  <data name="ActionBar_AddClipboard_Single" xml:space="preserve">
+    <value>Add manga from clipboard</value>
+  </data>
+  <data name="ActionBar_Move_Bottom" xml:space="preserve">
+    <value>Move selected items to bottom</value>
+  </data>
+  <data name="ActionBar_Move_Down" xml:space="preserve">
+    <value>Move selected items down</value>
+  </data>
+  <data name="ActionBar_Move_Top" xml:space="preserve">
+    <value>Move selected items to top</value>
+  </data>
+  <data name="ActionBar_Move_Up" xml:space="preserve">
+    <value>Move selected items up</value>
+  </data>
+  <data name="ActionBar_PauseDownloads_Tooltip" xml:space="preserve">
+    <value>Pause downloads</value>
+  </data>
+  <data name="ActionBar_StartDownloads_Tooltip" xml:space="preserve">
+    <value>Start downloads</value>
+  </data>
+  <data name="ActionBar_StopDownloads_Tooltip" xml:space="preserve">
+    <value>Stop downloads</value>
+  </data>
+  <data name="LeftTab_Bookmarks_Header" xml:space="preserve">
+    <value>Bookmarks</value>
+  </data>
+  <data name="LeftTab_Filter_Header" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="LeftTab_History_Header" xml:space="preserve">
+    <value>History</value>
+  </data>
   <data name="MainMenu_Downloads" xml:space="preserve">
     <value>_Downloads</value>
+  </data>
+  <data name="MainMenu_Downloads_Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="MainMenu_Downloads_Filter_Gesture" xml:space="preserve">
+    <value>Ctrl+F</value>
+  </data>
+  <data name="MainMenu_Downloads_History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="MainMenu_Downloads_History_Gesture" xml:space="preserve">
+    <value>Ctrl+H</value>
+  </data>
+  <data name="MainMenu_Downloads_PauseAll" xml:space="preserve">
+    <value>Pause all</value>
+  </data>
+  <data name="MainMenu_Downloads_PauseAll_Gesture" xml:space="preserve">
+    <value>Ctrl+P</value>
+  </data>
+  <data name="MainMenu_Downloads_QueueAll" xml:space="preserve">
+    <value>Queue all</value>
+  </data>
+  <data name="MainMenu_Downloads_QueueAll_Gesture" xml:space="preserve">
+    <value>Ctrl+Q</value>
+  </data>
+  <data name="MainMenu_Downloads_StartAll" xml:space="preserve">
+    <value>Start all</value>
+  </data>
+  <data name="MainMenu_Downloads_StartAll_Gesture" xml:space="preserve">
+    <value>Ctrl+Shift+A</value>
+  </data>
+  <data name="MainMenu_Downloads_StopAll" xml:space="preserve">
+    <value>Stop all</value>
+  </data>
+  <data name="MainMenu_Downloads_StopAll_Gesture" xml:space="preserve">
+    <value>Ctrl+Alt+A</value>
   </data>
   <data name="MainMenu_File" xml:space="preserve">
     <value>_File</value>
@@ -162,13 +234,82 @@
   <data name="MainMenu_Help" xml:space="preserve">
     <value>_Help</value>
   </data>
+  <data name="MainMenu_Help_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="MainMenu_Help_Diagnostics" xml:space="preserve">
+    <value>Enable/Disable diagnostics</value>
+  </data>
+  <data name="MainMenu_Help_Help" xml:space="preserve">
+    <value>View help</value>
+  </data>
+  <data name="MainMenu_Help_Help_Gesture" xml:space="preserve">
+    <value>F1</value>
+  </data>
   <data name="MainMenu_Help_SelectLanguage" xml:space="preserve">
     <value>Select Language</value>
+  </data>
+  <data name="MainMenu_Help_Stats" xml:space="preserve">
+    <value>Enable/Disable stats</value>
+  </data>
+  <data name="MainMenu_Help_Updates" xml:space="preserve">
+    <value>Check for updates</value>
   </data>
   <data name="MainMenu_Manga" xml:space="preserve">
     <value>_Manga</value>
   </data>
+  <data name="MainMenu_Manga_AddFromList" xml:space="preserve">
+    <value>Add from list</value>
+  </data>
+  <data name="MainMenu_Manga_AddFromList_Gesture" xml:space="preserve">
+    <value>Ctrl+L</value>
+  </data>
+  <data name="MainMenu_Manga_Bookmarks" xml:space="preserve">
+    <value>Bookmarks</value>
+  </data>
+  <data name="MainMenu_Manga_Bookmarks_Gesture" xml:space="preserve">
+    <value>Ctrl+D</value>
+  </data>
+  <data name="MainMenu_Manga_ClipboardMonitor" xml:space="preserve">
+    <value>Enable/Disable clipboard monitor</value>
+  </data>
+  <data name="MainMenu_Manga_ClipboardMonitor_Gesture" xml:space="preserve">
+    <value>Ctrl+Alt+V</value>
+  </data>
+  <data name="MainMenu_Manga_PasteClipboard" xml:space="preserve">
+    <value>Add from clipboard</value>
+  </data>
+  <data name="MainMenu_Manga_PasteClipboard_Gesture" xml:space="preserve">
+    <value>Ctrl+Shift+V</value>
+  </data>
+  <data name="MainMenu_Manga_SearchManga" xml:space="preserve">
+    <value>Search for manga</value>
+  </data>
+  <data name="MainMenu_Manga_SearchManga_Gesture" xml:space="preserve">
+    <value>F3</value>
+  </data>
   <data name="MainMenu_Tools" xml:space="preserve">
     <value>_Tools</value>
+  </data>
+  <data name="MainMenu_Tools_DomainManagement" xml:space="preserve">
+    <value>Domain management</value>
+  </data>
+  <data name="MainTab_About_Header" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="MainTab_Downloads_Header" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="MainTab_Settings_Header" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MangaPanel_Button" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="MangaPanel_Label" xml:space="preserve">
+    <value>Add manga from URL:</value>
+  </data>
+  <data name="MangaPanel_Watermark" xml:space="preserve">
+    <value>Url ...</value>
   </data>
 </root>

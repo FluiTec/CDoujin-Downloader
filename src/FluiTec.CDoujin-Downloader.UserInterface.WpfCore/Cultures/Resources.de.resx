@@ -117,8 +117,80 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ActionBar_AddClipboard_Monitor" xml:space="preserve">
+    <value>Monitor für Zwischenspeicher umschalten</value>
+  </data>
+  <data name="ActionBar_AddClipboard_Single" xml:space="preserve">
+    <value>Aus Zwischenspeicher hinzufügen</value>
+  </data>
+  <data name="ActionBar_Move_Bottom" xml:space="preserve">
+    <value>Gewählte Einträge ganz nach unten</value>
+  </data>
+  <data name="ActionBar_Move_Down" xml:space="preserve">
+    <value>Gewählte Einträge nach unten</value>
+  </data>
+  <data name="ActionBar_Move_Top" xml:space="preserve">
+    <value>Gewählte Einträge ganz nach oben</value>
+  </data>
+  <data name="ActionBar_Move_Up" xml:space="preserve">
+    <value>Gewählte Einträge nach oben</value>
+  </data>
+  <data name="ActionBar_PauseDownloads_Tooltip" xml:space="preserve">
+    <value>Downloads pausieren</value>
+  </data>
+  <data name="ActionBar_StartDownloads_Tooltip" xml:space="preserve">
+    <value>Downloads starten</value>
+  </data>
+  <data name="ActionBar_StopDownloads_Tooltip" xml:space="preserve">
+    <value>Downloads stoppen</value>
+  </data>
+  <data name="LeftTab_Bookmarks_Header" xml:space="preserve">
+    <value>Lesezeichen</value>
+  </data>
+  <data name="LeftTab_Filter_Header" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="LeftTab_History_Header" xml:space="preserve">
+    <value>Logbuch</value>
+  </data>
   <data name="MainMenu_Downloads" xml:space="preserve">
     <value>D_ownloads</value>
+  </data>
+  <data name="MainMenu_Downloads_Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="MainMenu_Downloads_Filter_Gesture" xml:space="preserve">
+    <value>Strg+F</value>
+  </data>
+  <data name="MainMenu_Downloads_History" xml:space="preserve">
+    <value>Logbuch</value>
+  </data>
+  <data name="MainMenu_Downloads_History_Gesture" xml:space="preserve">
+    <value>Strg+H</value>
+  </data>
+  <data name="MainMenu_Downloads_PauseAll" xml:space="preserve">
+    <value>Alle pausieren</value>
+  </data>
+  <data name="MainMenu_Downloads_PauseAll_Gesture" xml:space="preserve">
+    <value>Strg+P</value>
+  </data>
+  <data name="MainMenu_Downloads_QueueAll" xml:space="preserve">
+    <value>Alle einreihen</value>
+  </data>
+  <data name="MainMenu_Downloads_QueueAll_Gesture" xml:space="preserve">
+    <value>Strg+Q</value>
+  </data>
+  <data name="MainMenu_Downloads_StartAll" xml:space="preserve">
+    <value>Alle starten</value>
+  </data>
+  <data name="MainMenu_Downloads_StartAll_Gesture" xml:space="preserve">
+    <value>Strg+Shift+A</value>
+  </data>
+  <data name="MainMenu_Downloads_StopAll" xml:space="preserve">
+    <value>Alle stoppen</value>
+  </data>
+  <data name="MainMenu_Downloads_StopAll_Gesture" xml:space="preserve">
+    <value>Strg+Alt+A</value>
   </data>
   <data name="MainMenu_File" xml:space="preserve">
     <value>_Datei</value>
@@ -162,13 +234,82 @@
   <data name="MainMenu_Help" xml:space="preserve">
     <value>_Hilfe</value>
   </data>
+  <data name="MainMenu_Help_About" xml:space="preserve">
+    <value>Über</value>
+  </data>
+  <data name="MainMenu_Help_Diagnostics" xml:space="preserve">
+    <value>Fehlerprotokoll umschalten</value>
+  </data>
+  <data name="MainMenu_Help_Help" xml:space="preserve">
+    <value>Hilfe aufrufen</value>
+  </data>
+  <data name="MainMenu_Help_Help_Gesture" xml:space="preserve">
+    <value>F1</value>
+  </data>
   <data name="MainMenu_Help_SelectLanguage" xml:space="preserve">
     <value>Sprache auswählen</value>
+  </data>
+  <data name="MainMenu_Help_Stats" xml:space="preserve">
+    <value>Statistiken umschalten</value>
+  </data>
+  <data name="MainMenu_Help_Updates" xml:space="preserve">
+    <value>Auf Updates prüfen</value>
   </data>
   <data name="MainMenu_Manga" xml:space="preserve">
     <value>_Manga</value>
   </data>
+  <data name="MainMenu_Manga_AddFromList" xml:space="preserve">
+    <value>Aus Liste hinzufügen</value>
+  </data>
+  <data name="MainMenu_Manga_AddFromList_Gesture" xml:space="preserve">
+    <value>Strg+L</value>
+  </data>
+  <data name="MainMenu_Manga_Bookmarks" xml:space="preserve">
+    <value>Lesezeichen</value>
+  </data>
+  <data name="MainMenu_Manga_Bookmarks_Gesture" xml:space="preserve">
+    <value>Strg+D</value>
+  </data>
+  <data name="MainMenu_Manga_ClipboardMonitor" xml:space="preserve">
+    <value>Monitor für Zwischenspeicher umschalten</value>
+  </data>
+  <data name="MainMenu_Manga_ClipboardMonitor_Gesture" xml:space="preserve">
+    <value>Strg+Alt+V</value>
+  </data>
+  <data name="MainMenu_Manga_PasteClipboard" xml:space="preserve">
+    <value>Aus Zwischenspeicher einfügen</value>
+  </data>
+  <data name="MainMenu_Manga_PasteClipboard_Gesture" xml:space="preserve">
+    <value>Strg+Shift+V</value>
+  </data>
+  <data name="MainMenu_Manga_SearchManga" xml:space="preserve">
+    <value>Nach Mangas suchen</value>
+  </data>
+  <data name="MainMenu_Manga_SearchManga_Gesture" xml:space="preserve">
+    <value>F3</value>
+  </data>
   <data name="MainMenu_Tools" xml:space="preserve">
     <value>_Tools</value>
+  </data>
+  <data name="MainMenu_Tools_DomainManagement" xml:space="preserve">
+    <value>Domainverwaltung</value>
+  </data>
+  <data name="MainTab_About_Header" xml:space="preserve">
+    <value>Über</value>
+  </data>
+  <data name="MainTab_Downloads_Header" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="MainTab_Settings_Header" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="MangaPanel_Button" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="MangaPanel_Label" xml:space="preserve">
+    <value>Manga aus URL:</value>
+  </data>
+  <data name="MangaPanel_Watermark" xml:space="preserve">
+    <value>Url ...</value>
   </data>
 </root>
